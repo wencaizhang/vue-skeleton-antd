@@ -1,5 +1,9 @@
 <template>
-  <div class="vue-skeleton" v-show="loading">
+  <div
+    class="vue-skeleton"
+    :class="{'vue-skeleton-active': active}"
+    v-show="loading"
+  >
     <!-- <h3  v-show="title" class="vue-skeleton-title vue-skeleton-item"></h3> -->
     <div v-show="avatar" class="vue-skeleton-header">
       <span class="vue-skeleton-avatar"></span>
@@ -61,13 +65,15 @@ export default {
 .vue-skeleton-item {
   height: 16px;
   margin-top: 16px;
-  background: #f2f2f2;
   list-style: none;
 }
 .vue-skeleton-avatar,
 .vue-skeleton-item {
+  background: #f2f2f2;
+}
+.vue-skeleton-active .vue-skeleton-avatar,
+.vue-skeleton-active .vue-skeleton-item {
   background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
-  -webkit-animation: skeleton-loading 1.4s ease infinite;
   animation: skeleton-loading 1.4s ease infinite;
   background-size: 400% 100%;
 }
