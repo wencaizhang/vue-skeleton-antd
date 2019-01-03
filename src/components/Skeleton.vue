@@ -4,12 +4,14 @@
     :class="{'vue-skeleton-active': active}"
     v-show="loading"
   >
-    <!-- <h3  v-show="title" class="vue-skeleton-title vue-skeleton-item"></h3> -->
     <div v-show="avatar" class="vue-skeleton-header">
       <span class="vue-skeleton-avatar"></span>
     </div>
-    <div v-show="paragraph" class="vue-skeleton-content">
-      <div class="vue-skeleton-item" v-for="i in rows" :key="i"></div>
+    <div class="vue-skeleton-content">
+      <h3  v-show="title" class="vue-skeleton-title"></h3>
+      <div v-show="paragraph" class="vue-skeleton-paragraph">
+        <div class="vue-skeleton-item" v-for="i in rows" :key="i"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -71,10 +73,12 @@ export default {
   margin-top: 16px;
   list-style: none;
 }
+.vue-skeleton-title
 .vue-skeleton-avatar,
 .vue-skeleton-item {
   background: #f2f2f2;
 }
+.vue-skeleton-active .vue-skeleton-title,
 .vue-skeleton-active .vue-skeleton-avatar,
 .vue-skeleton-active .vue-skeleton-item {
   background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
