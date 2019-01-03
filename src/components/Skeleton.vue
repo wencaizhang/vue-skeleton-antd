@@ -8,7 +8,7 @@
     <div v-show="avatar" class="vue-skeleton-header">
       <span class="vue-skeleton-avatar"></span>
     </div>
-    <div class="vue-skeleton-content">
+    <div v-show="paragraph" class="vue-skeleton-content">
       <div class="vue-skeleton-item" v-for="i in rows" :key="i"></div>
     </div>
   </div>
@@ -27,6 +27,10 @@ export default {
       default: 3
     },
     active: {
+      type: Boolean,
+      default: true
+    },
+    paragraph: {
       type: Boolean,
       default: true
     },
