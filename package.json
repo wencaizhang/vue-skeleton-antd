@@ -1,0 +1,18 @@
+{
+  "name": "vue-skeleton-antd",
+  "version": "0.0.1",
+  "description": "a skeleton component Base on vue.js",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wencaizhang/vue-skeleton-antd.git"
+  },
+  "keywords": [
+    "vue",
+    "npm",
+    "skeleton",
+    "loading",
+    "ant design"
+  ]
+}
