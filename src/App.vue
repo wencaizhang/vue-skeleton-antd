@@ -1,0 +1,32 @@
+<template>
+  <div id="app">
+    <Skeleton :loading="loading" />
+  </div>
+</template>
+
+<script>
+import Skeleton from './components/Skeleton.vue'
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      loading: true,
+    }
+  },
+  components: {
+    Skeleton
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
