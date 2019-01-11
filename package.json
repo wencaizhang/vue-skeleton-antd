@@ -3,7 +3,8 @@
   "version": "0.0.2",
   "description": "a skeleton component Base on vue.js",
   "license": "MIT",
-  "main": "index.js",
+  "author": "wencaizhang <1052642137@qq.como>",
+  "main": "./src/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
