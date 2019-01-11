@@ -1,14 +1,10 @@
 <template>
-  <div
-    class="vue-skeleton"
-    :class="{'vue-skeleton-active': active}"
-    v-show="loading"
-  >
+  <div class="vue-skeleton" :class="{'vue-skeleton-active': active}" v-show="loading">
     <div v-show="avatar" class="vue-skeleton-header">
       <span class="vue-skeleton-avatar"></span>
     </div>
     <div class="vue-skeleton-content">
-      <h3  v-show="title" class="vue-skeleton-title"></h3>
+      <h3 v-show="title" class="vue-skeleton-title"></h3>
       <div v-show="paragraph" class="vue-skeleton-paragraph">
         <div class="vue-skeleton-item" v-for="i in rows" :key="i"></div>
       </div>
@@ -18,6 +14,7 @@
 
 <script>
 export default {
+  name: "skeleton",
   props: {
     loading: {
       type: Boolean,
@@ -43,13 +40,15 @@ export default {
     avatar: {
       type: Boolean,
       default: true
-    },
+    }
   },
-  name: "",
 };
 </script>
 
-<style>
+<style scoped>
+h3 {
+  margin: 0;
+}
 .vue-skeleton {
   display: flex;
   flex-direction: row;
@@ -68,12 +67,18 @@ export default {
   border-radius: 50%;
 }
 
+
+.vue-skeleton-title {
+  height: 16px;
+  margin-bottom: 16px;
+  width: 50%;
+}
+
 .vue-skeleton-item {
   height: 16px;
   margin-top: 16px;
   list-style: none;
 }
-.vue-skeleton-title
 .vue-skeleton-avatar,
 .vue-skeleton-item {
   background: #f2f2f2;

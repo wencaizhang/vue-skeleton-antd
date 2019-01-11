@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import Skeleton from './components/Skeleton.vue'
 
 export default {
   name: 'app',
@@ -14,9 +13,6 @@ export default {
       loading: true,
     }
   },
-  components: {
-    Skeleton
-  }
 }
 </script>
 
