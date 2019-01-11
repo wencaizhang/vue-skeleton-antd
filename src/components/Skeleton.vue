@@ -1,14 +1,19 @@
 <template>
-  <div class="vue-skeleton" :class="{'vue-skeleton-active': active}" v-show="loading">
-    <div v-show="avatar" class="vue-skeleton-header">
-      <span class="vue-skeleton-avatar"></span>
-    </div>
-    <div class="vue-skeleton-content">
-      <h3 v-show="title" class="vue-skeleton-title"></h3>
-      <div v-show="paragraph" class="vue-skeleton-paragraph">
-        <div class="vue-skeleton-item" v-for="i in rows" :key="i"></div>
+  <div :class="{ 'vue-skeleton': loading, 'vue-skeleton-active': loading && active }">
+    <template v-if="loading">
+      <div v-show="avatar" class="vue-skeleton-header">
+        <span class="vue-skeleton-avatar"></span>
       </div>
-    </div>
+      <div class="vue-skeleton-content">
+        <h3 v-show="title" class="vue-skeleton-title"></h3>
+        <div v-show="paragraph" class="vue-skeleton-paragraph">
+          <div class="vue-skeleton-item" v-for="i in rows" :key="i"></div>
+        </div>
+      </div>
+    </template>
+    <template v-else>
+      <slot/>
+    </template>
   </div>
 </template>
 
@@ -41,7 +46,7 @@ export default {
       type: Boolean,
       default: true
     }
-  },
+  }
 };
 </script>
 
@@ -66,7 +71,6 @@ h3 {
   line-height: 40px;
   border-radius: 50%;
 }
-
 
 .vue-skeleton-title {
   height: 16px;
