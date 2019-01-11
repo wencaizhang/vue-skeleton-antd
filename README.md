@@ -1,6 +1,27 @@
 # vue-skeleton-antd
 vue 构建的 ant design 风格骨架屏组件
 
+## 组件引入
+
+1. 安装
+
+```bash
+# npm 安装
+npm i vue-skeleton-antd
+
+# yarn
+yarn add vue-skeleton-antd
+```
+
+2. 引入组件
+
+```js
+import Vue from 'vue';
+import Skeleton from 'vue-skeleton-antd';
+
+Vue.use(Skeleton)
+```
+
 ## API
 
 ### Skeleton 骨架屏
