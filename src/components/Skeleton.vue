@@ -50,56 +50,63 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+@bgc: #f2f2f2;
+@gradient: #e6e6e6;
+
 h3 {
   margin: 0;
 }
 .vue-skeleton {
   display: flex;
   flex-direction: row;
-}
-.vue-skeleton-header {
-  padding-right: 15px;
-}
-.vue-skeleton-content {
-  flex: 1;
-}
-.vue-skeleton-avatar {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  border-radius: 50%;
+
+  .vue-skeleton-header {
+    padding-right: 15px;
+
+    .vue-skeleton-title {
+      height: 16px;
+      margin-bottom: 16px;
+      width: 50%;
+    }
+  }
+  .vue-skeleton-content {
+    flex: 1;
+
+    .vue-skeleton-item {
+      height: 16px;
+      margin-top: 16px;
+      list-style: none;
+      &:first-child {
+        margin: 0;
+      }
+      &:last-child {
+        width: 61%;
+      }
+    }
+  }
+  .vue-skeleton-avatar {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background: @bgc;
+  }
+
+  &.vue-skeleton-active {
+    .vue-skeleton-title,
+    .vue-skeleton-avatar,
+    .vue-skeleton-item {
+      background: linear-gradient(90deg, @bgc 25%, @gradient 37%, @bgc 63%);
+      animation: skeleton-loading 1.4s ease infinite;
+      background-size: 400% 100%;
+    }
+  }
 }
 
-.vue-skeleton-title {
-  height: 16px;
-  margin-bottom: 16px;
-  width: 50%;
-}
 
-.vue-skeleton-item {
-  height: 16px;
-  margin-top: 16px;
-  list-style: none;
-}
-.vue-skeleton-avatar,
-.vue-skeleton-item {
-  background: #f2f2f2;
-}
-.vue-skeleton-active .vue-skeleton-title,
-.vue-skeleton-active .vue-skeleton-avatar,
-.vue-skeleton-active .vue-skeleton-item {
-  background: linear-gradient(90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
-  animation: skeleton-loading 1.4s ease infinite;
-  background-size: 400% 100%;
-}
-.vue-skeleton-item:first-child {
-  margin: 0;
-}
-.vue-skeleton-item:last-child {
-  width: 61%;
-}
+
 
 @-webkit-keyframes skeleton-loading {
   0%,
