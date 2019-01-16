@@ -5,6 +5,11 @@
 # vue-skeleton-antd
 vue 构建的 ant design 风格骨架屏组件
 
+## 文档
+
++ [GitHub](https://wencaizhang.github.io/vue-skeleton-antd/)
++ [码云镜像](https://wencaizhang.gitee.io/vue-skeleton-antd/)
+
 ## 组件引入
 
 1. 安装
