@@ -1,6 +1,6 @@
 <template>
   <div style="padding-top: 16px;">
-    <Skeleton />
+    <Skeleton avatar :paragraph="{rows: 4, width: '80%'}"/>
   </div>
 </template>
 

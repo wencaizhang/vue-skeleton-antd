@@ -5,36 +5,36 @@ title: API
 
 ## 1. Skeleton 骨架屏
 
----
+|  属性 |  说明 | 类型  |  默认值 |
+| ------------ | ------------ | ------------ | ------------ |
+|  `active` |  是否展示动画效果 | boolean  | false  |
+|  `avatar` |  是否显示头像占位图 |  boolean 或 object |  false |
+|  `paragraph` |  是否显示段落占位图 |  boolean 或 object |  true |
+|  `title` |  是否显示标题占位图 |  boolean 或 object |  true |
+|  `loading` |  为 `true` 时，显示占位图。<br>反之则直接展示子组件 |  boolean |  true |
+
+## 2. AvatarProps 头像参数
+
+头像参数 `avatar` 除了可以设置布尔值之外，还可以是 Object。如果是 Object，则允许拥有以下属性。
 
 |  属性 |  说明 | 类型  |  默认值 |
 | ------------ | ------------ | ------------ | ------------ |
-|  active |  是否展示动画效果 | boolean  | true  |
-|  avatar |  是否显示头像占位图 |  boolean |  true |
-|  paragraph |  是否显示段落占位图 |  boolean |  true |
-|  title |  是否显示标题占位图 |  boolean |  true |
-|  loading |  为 `true` 时，显示占位图。反之则直接展示子组件 |  boolean |  - |
+|  `size`(todo) |  设置头像占位图的大小  | Enum{ 'large', 'small', 'default' } |
+|  `shape` |  指定头像的形状 | Enum{ 'circle', 'square' }  | -  |
 
-## 2. SkeletonAvatarProps 头像参数
+## 3. TitleProps 标题参数
 
----
+标题参数 `avatar` 除了可以设置布尔值之外，还可以是 Object。如果是 Object，则允许拥有以下属性。
 
 |  属性 |  说明 | 类型  |  默认值 |
 | ------------ | ------------ | ------------ | ------------ |
-|  size |  设置头像占位图的大小  | Enum{ 'large', 'small', 'default' } |
-|  shape |  指定头像的形状 | Enum{ 'circle', 'square' }  | -  |
+|  `width` |  设置标题占位图的宽度 | number | string  | -  |
 
-## 3. SkeletonTitleProps 标题参数
+## 4. ParagraphProps 段落参数
 
----
-
-|  属性 |  说明 | 类型  |  默认值 |
-| ------------ | ------------ | ------------ | ------------ |
-|  width |  设置标题占位图的宽度 | number | string  | -  |
-
-## 4. SkeletonParagraphProps 段落参数
+段落参数 `avatar` 除了可以设置布尔值之外，还可以是 Object。如果是 Object，则允许拥有以下属性。
 
 |  属性 |  说明 | 类型  |  默认值 |
 | ------------ | ------------ | ------------ | ------------ |
-|  rows |  设置段落占位图的行数 | number  | true  |
-|  width |  设置段落占位图的宽度，若为数组时则为对应的每行宽度，反之则是最后一行的宽度 | number | string | Array<number | string>  | -  |
+|  `rows` |  设置段落占位图的行数 | number  | 3  |
+|  `width`(todo) |  设置段落占位图的宽度，若为数组时则为对应的每行宽度，反之则是最后一行的宽度 | `number | string | Array<number | string>`  | -  |
