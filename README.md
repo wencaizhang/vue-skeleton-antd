@@ -1,4 +1,5 @@
-![](https://img.shields.io/npm/dt/vue-skeleton-antd.svg)
+[![npm version](https://badge.fury.io/js/vue-skeleton-antd.svg)](https://badge.fury.io/js/vue-skeleton-antd)
+[![](https://img.shields.io/npm/dt/vue-skeleton-antd.svg)](https://badge.fury.io/js/vue-skeleton-antd)
 ![](https://img.shields.io/badge/license-MIT-000000.svg)
 
 
