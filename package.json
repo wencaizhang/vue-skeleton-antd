@@ -10,8 +10,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "npm run docs:build"
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "less": "2.7.3",

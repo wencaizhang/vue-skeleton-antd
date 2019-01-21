@@ -9,9 +9,9 @@
         <div v-show="paragraph" class="vue-skeleton-paragraph">
           <div
             class="vue-skeleton-item"
-            :style="{width: paragraphWidth}"
-            :key="i"
             v-for="i in rows"
+            :key="i"
+            :style="{width: paragraphWidth[i-1]}"
           ></div>
         </div>
       </div>
@@ -40,25 +40,44 @@ export default {
     },
     title: {
       type: [Boolean, Object],
-      default: true
+      default: true,
     },
     avatar: {
       type: [Boolean, Object],
-      default: false
+      default: false,
+      validator (value) {
+        if (typeof value === 'object') {
+          if (value.hasOwnProperty('shape')) {
+            if (!['circle', 'square'].includes(value.shape)) {
+              console.warn('请使用合法的 shape 属性值！')
+              return false;
+            }
+          }
+          return true;
+        }
+        return typeof value === 'boolean';
+      }
     }
   },
   computed: {
     rows() {
       if (typeof this.paragraph == "object" && this.paragraph.rows) {
-        return this.paragraph.rows;
+        return Number.parseInt(this.paragraph.rows) || 3;
       }
       return 3;
     },
     paragraphWidth() {
       if (typeof this.paragraph == "object" && this.paragraph.width) {
-        return this.paragraph.width;
+        if (typeof this.paragraph.width === 'string') {
+          const arr = new Array(this.rows).fill('100%');
+          arr[this.rows - 1] = this.paragraph.width;
+          return arr;
+        }
+        if (typeof this.paragraph.width === 'array') {
+          return this.paragraph.width;
+        }
       }
-      return "100%";
+      return new Array(this.rows).fill('100%');;
     },
     titleWidth() {
       if (typeof this.title == "object" && this.title.width) {
@@ -76,7 +95,6 @@ export default {
         return '50%';
       }
       return '0%';
-      
     },
   }
 };

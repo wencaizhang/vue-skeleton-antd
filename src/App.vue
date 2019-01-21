@@ -4,10 +4,10 @@
     <Skeleton/>
 
     <h3>更复杂的组合</h3>
-    <Skeleton avatar :paragraph="{rows: 4, width: '80%'}"/>
+    <Skeleton avatar :paragraph="{rows: 4, width: ['10%', '10%', '80%']}"/>
 
     <h3>动画效果</h3>
-    <Skeleton active :title="{width: '90%'}"/>
+    <Skeleton active :title="{ width: '90%' }"/>
 
     <h3>动画效果</h3>
     <Skeleton active :avatar="{shape: 'square'}"/>
@@ -15,12 +15,18 @@
     <h3>加载占位图包含子组件</h3>
     <button @click="showSkeleton">show skeleton</button>
     <Skeleton :loading="loading">Skeleton</Skeleton>
+
+
+  <!-- <transfer /> -->
+
   </div>
 </template>
 
 <script>
+import transfer from './components/transfer'
 export default {
   name: "app",
+  components: { transfer },
   data() {
     return {
       loading: false
