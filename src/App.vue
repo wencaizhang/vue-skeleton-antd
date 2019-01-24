@@ -1,55 +1,38 @@
 <template>
   <div id="app">
-    <h3>最基本的展位效果</h3>
-    <Skeleton/>
-
-    <h3>更复杂的组合</h3>
-    <Skeleton avatar :paragraph="{rows: 4, width: ['10%', '10%', '80%']}"/>
-
-    <h3>动画效果</h3>
-    <Skeleton active :title="{ width: '90%' }"/>
-
-    <h3>动画效果</h3>
-    <Skeleton active :avatar="{shape: 'square'}"/>
-
-    <h3>加载占位图包含子组件</h3>
-    <button @click="showSkeleton">show skeleton</button>
-    <Skeleton :loading="loading">Skeleton</Skeleton>
-
-
-  <!-- <transfer /> -->
-
+    <div class="links">
+      <p>关于示例和API请查看文档：</p>
+      <a target="_blank" href="https://wencaizhang.github.io/vue-skeleton-antd/">1. Host by GitHub</a>
+      <br>
+      <a target="_blank" href="https://wencaizhang.gitee.io/vue-skeleton-antd/">2. 码云</a>
+    </div>
   </div>
 </template>
 
 <script>
-import transfer from './components/transfer'
 export default {
   name: "app",
-  components: { transfer },
   data() {
     return {
       loading: false
     };
   },
-  methods: {
-    showSkeleton() {
-      this.loading = true;
-      setTimeout(() => {
-        this.loading = false;
-      }, 3000);
-    }
-  }
+  methods: {}
 };
 </script>
 
-<style>
+<style scoped>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+}
+.links {
+  display: inline-block;
+  margin-top: 100px;
+}
+a {
+  color: #1890ff;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
+
