@@ -1,6 +1,6 @@
 <template>
   <div style="padding-top: 16px;">
-    <Skeleton avatar :paragraph="{rows: 4, width: '80%'}"/>
+    <Skeleton :paragraph="{rows: 4}"/>
   </div>
 </template>
 
@@ -11,3 +11,4 @@ export default {
   components: { Skeleton },
 };
 </script>
+

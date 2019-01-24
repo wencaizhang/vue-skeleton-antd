@@ -21,14 +21,22 @@ module.exports = {
         ]
       },
       {
-        title: '使用',
+        title: '示例',
         collapsable: false,
         children: [
-          '/components/demo',
+          '/components/demo-1',
+          '/components/demo-2',
+          '/components/demo-3',
+          '/components/demo-4',
+        ]
+      },
+      {
+        title: '文档',
+        collapsable: false,
+        children: [
           '/components/api',
         ]
       },
-
     ]
   },
   scss:{

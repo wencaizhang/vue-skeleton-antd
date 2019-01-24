@@ -20,7 +20,7 @@ yarn add vue-skeleton-antd
 
 ## 导入组件
 
-可以在 `main.js` 中导入：
+在 `main.js` 中导入之后，就可以当做全局组件使用：
 
 ```javascript
 import Vue from 'vue';

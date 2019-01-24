@@ -1,6 +1,6 @@
 <template>
   <div style="padding-top: 16px;">
-    <Skeleton active :title="{width: '90%'}"/>
+    <Skeleton avatar />
   </div>
 </template>
 
