@@ -14,7 +14,7 @@ title: 基础版
 **代码**
 
 ```html
-<Skeleton />
+<vue-skeleton/>
 ```
 
 ## 动画效果
@@ -28,11 +28,11 @@ title: 基础版
 **代码**
 
 ```html
-<Skeleton :active="true" />
+<vue-skeleton :active="true" />
 ```
 
 或者简写如下：
 
 ```html
-<Skeleton active />
+<vue-skeleton active />
 ```

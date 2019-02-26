@@ -1,14 +1,14 @@
 <template>
   <div style="padding-top: 16px;">
-    <Skeleton :title="{width: '80%'}"/>
+    <vue-skeleton :title="{width: '80%'}"/>
   </div>
 </template>
 
 <script>
-import Skeleton from "../../../src/components/Skeleton";
+import vueSkeleton from "../../../src/components/Skeleton";
 
 export default {
-  components: { Skeleton },
+  components: { vueSkeleton },
   data() {
     return {
       loading: true,

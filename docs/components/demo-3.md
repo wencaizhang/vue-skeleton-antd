@@ -14,7 +14,7 @@ title: 标题
 **代码**
 
 ```html
-<Skeleton />
+<vue-skeleton/>
 ```
 
 ## 指定标题宽度
@@ -28,5 +28,5 @@ title: 标题
 **代码**
 
 ```html
-<Skeleton :title="{width: '80%'}"/>
+<vue-skeleton :title="{width: '80%'}"/>
 ```

@@ -1,19 +1,19 @@
 <template>
   <div style="padding-top: 16px;">
     <button @click="loading = !loading">Toggle Skeleton</button>
-    <Skeleton :loading="loading" :paragraph="{rows: 2}">
+    <vue-skeleton :loading="loading" :paragraph="{rows: 2}">
       <p><strong>静夜思</strong></p>
       <p>床前明月光，疑是地上霜。</p>
       <p>举头望明月，低头思故乡。</p>
-    </Skeleton>
+    </vue-skeleton>
   </div>
 </template>
 
 <script>
-import Skeleton from "../../../src/components/Skeleton";
+import vueSkeleton from "../../../src/components/Skeleton";
 
 export default {
-  components: { Skeleton },
+  components: { vueSkeleton },
   data() {
     return {
       loading: true,

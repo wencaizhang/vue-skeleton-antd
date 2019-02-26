@@ -1,13 +1,13 @@
 <template>
   <div style="padding-top: 16px;">
-    <Skeleton active />
+    <vue-skeleton active />
   </div>
 </template>
 
 <script>
-import Skeleton from "../../../src/components/Skeleton";
+import vueSkeleton from "../../../src/components/Skeleton";
 
 export default {
-  components: { Skeleton },
+  components: { vueSkeleton },
 };
 </script>

@@ -14,7 +14,7 @@ title: 段落
 **代码**
 
 ```html
-<Skeleton />
+<vue-skeleton/>
 ```
 
 ## 指定段落行数
@@ -28,7 +28,7 @@ title: 段落
 **代码**
 
 ```html
-<Skeleton :paragraph="{rows: 4}"/>
+<vue-skeleton :paragraph="{rows: 4}"/>
 ```
 
 ## 指定段落宽度
@@ -44,5 +44,5 @@ title: 段落
 **代码**
 
 ```html
-<Skeleton :paragraph="{rows: 4, width: '80%'}"/>
+<vue-skeleton :paragraph="{rows: 4, width: '80%'}"/>
 ```

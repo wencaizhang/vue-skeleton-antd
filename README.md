@@ -43,9 +43,9 @@ yarn add vue-skeleton-antd
 
 ```js
 import Vue from 'vue';
-import Skeleton from 'vue-skeleton-antd';
+import vueSkeleton from 'vue-skeleton-antd';
 
-Vue.use(Skeleton)
+Vue.use(vueSkeleton)
 ```
 
 ## API

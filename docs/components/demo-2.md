@@ -14,7 +14,7 @@ title: 头像
 **代码**
 
 ```html
-<Skeleton avatar/>
+<vue-skeleton avatar/>
 ```
 
 ## 头像形状
@@ -28,5 +28,5 @@ title: 头像
 **代码**
 
 ```html
-<Skeleton :avatar="{shape: 'square'}"/>
+<vue-skeleton :avatar="{shape: 'square'}"/>
 ```
