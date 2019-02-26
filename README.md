@@ -50,6 +50,7 @@ Vue.use(Skeleton)
 
 ## API
 
+
 ### 1. Skeleton 骨架屏
 
 |  属性 |  说明 | 类型  |  默认值 |
@@ -84,3 +85,7 @@ Vue.use(Skeleton)
 | ------------ | ------------ | ------------ | ------------ |
 |  `rows` |  设置段落占位图的行数 | number  | 3  |
 |  `width` |  设置段落最后一行的宽度 | `number | string`  | -  |
+
+## LICENSE
+
+MIT License
